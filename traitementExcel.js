@@ -32,7 +32,8 @@ for (let r = 4; r <= range.e.r + 1; r++) {
     (!prenom || String(prenom).trim() === '') ||
     (!nom || String(nom).trim() === '') ||
     (!phone || String(phone).trim() === '') ||
-    (pourcentagePresence == null)
+    //ASTA E ZONA DE FILTRARE, AIA CARE AU MAI MULT DE 50% SUNT EXCLUSE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    (pourcentagePresence == null || pourcentagePresence > 50)
   ) {
     continue;
   }
@@ -40,7 +41,7 @@ for (let r = 4; r <= range.e.r + 1; r++) {
   out.push({
     nom: nom ?? '',
     prenom: prenom ?? '',
-    phone: phone == null ? '' : String(phone).trim(),
+    phone: phone == null ? '' : String(phone).trim().replace('+', ''),
     pourcentagePresence,
   });
 }

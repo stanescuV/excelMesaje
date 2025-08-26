@@ -18,7 +18,7 @@ client.on('ready', async () => {
     try {
       await client.sendMessage(
         chatId,
-        `Bonjour ${name} ${prenom}, nous avons remarqué que votre taux de présence est de ${pourcentagePresence}%. Il faut que vous vous présentiez plus souvent sinon nous allons devoir prendre des mesures. Merci de votre compréhension.`
+        `Bonjour ${name} ${prenom}, votre pourcentage de présence est inférieur à 50%(${pourcentagePresence}%). Si vous ne l'améliorez pas vous risquez d'être exlus du cours. Merci de votre compréhension. Mircea STANESCU`
       );
       console.log(`Message envoyé à ${phone}`);
     } catch (err) {

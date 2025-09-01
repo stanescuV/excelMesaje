@@ -65,5 +65,5 @@ for (const sheetName of sheetNames) {
   }
 }
 
-console.log(out);
+// console.log(out);
 module.exports = out;
